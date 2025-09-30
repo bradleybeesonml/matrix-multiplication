@@ -2,6 +2,8 @@
 
 An interactive web application that computes matrix multiplication (C = A × B) with step-by-step dot-product visualization. Perfect for educational purposes, this tool helps users understand how matrix multiplication works by highlighting individual operations and showing the running sum.
 
+🌐 **Live Demo:** [https://matrix-multiplication-66055vpo4-bradley-beesons-projects.vercel.app](https://matrix-multiplication-66055vpo4-bradley-beesons-projects.vercel.app)
+
 ![Matrix Calculator Demo](https://via.placeholder.com/800x400/1e293b/ffffff?text=Matrix+Multiplication+Calculator)
 
 ## ✨ Features
@@ -12,26 +14,33 @@ An interactive web application that computes matrix multiplication (C = A × B) 
 - **Interactive Editing**: Click to edit matrix cells with keyboard navigation
 - **Dimension Control**: Resize matrices with automatic validation
 - **Preset Examples**: Quick-load common matrix multiplication scenarios
+- **Educational Messages**: Clear feedback for incompatible matrix dimensions
 
 ### 🎨 Visual Features
 - **Cell Highlighting**: Current row/column and active multiplication pairs
-- **Heatmap Mode**: Color-code matrix values for better visualization
 - **Smooth Animations**: Framer Motion powered transitions and effects
-- **Dark/Light Mode**: Toggle between themes
 - **Responsive Design**: Works on desktop and mobile devices
+- **Clean UI**: Modern, math-classroom inspired design
+- **Side-by-side Layout**: Matrix A, B, and Result C displayed together
 
 ### 🎮 Animation Controls
 - **Auto-play**: Automatically step through all calculations
 - **Manual Stepping**: Step forward/backward through individual operations
-- **Speed Control**: Adjust animation speed (0.5x to 5x)
-- **Step Modes**: Choose between factor-level or cell-level stepping
-- **Progress Tracking**: Visual progress indicator
+- **Speed Control**: Adjust animation speed (0.25x to 3x)
+- **Restart Animation**: Reset and replay the entire animation
+- **Running Sum Animation**: Shows addition values with green "+X" indicators
+
+### ✨ Advanced Animations
+- **Floating Number Animation**: Dot product results "float" into Matrix C
+- **Counting Animation**: Running sum counts up with each addition
+- **Step-by-step Display**: Current dot product shown prominently at top
+- **Visual Feedback**: Clear indication of which cells are being multiplied
 
 ### ♿ Accessibility
 - **Keyboard Navigation**: Full keyboard support for matrix editing
 - **ARIA Labels**: Screen reader friendly
 - **Focus Management**: Clear visual focus indicators
-- **High Contrast**: Supports system dark/light mode preferences
+- **Educational Tooltips**: Helpful guidance for users
 
 ## 🚀 Quick Start
 
@@ -111,11 +120,9 @@ npm run preview
 
 ### Quick Actions
 
-- **Randomize**: Fill matrices with random values (-9 to 9)
-- **Identity**: Create identity matrices (square matrices only)
-- **Clear**: Zero out matrix values
-- **Swap**: Exchange matrices A and B
 - **Presets**: Load example matrices for common scenarios
+- **Matrix Controls**: Each matrix has its own dimension controls
+- **Reset Animation**: Restart the entire animation from the beginning
 
 ## 🛠️ Technical Details
 
@@ -130,17 +137,19 @@ npm run preview
 ### Key Components
 
 - `MatrixEditor`: Editable matrix component with highlighting
-- `AnimatorPanel`: Animation controls and progress tracking
-- `DotProductStack`: Step-by-step multiplication visualization
-- `ControlsBar`: Matrix operations and settings
+- `MatrixCard`: Wrapper component with dimension controls
+- `CurrentStepDisplay`: Shows current dot product calculation at top
+- `AnimatedCounter`: Running sum with addition animations
+- `FloatingNumber`: Animated numbers floating into result matrix
+- `ControlsPopover`: Compact controls and presets
 - `useAnimator`: Animation logic and state management
 
 ### Matrix Operations
 - Real-time validation of matrix dimensions
 - Efficient multiplication algorithm
 - Step-by-step dot-product generation
-- Heatmap color calculation
 - Number formatting with precision control
+- Educational error messages for incompatible dimensions
 
 ## 🧪 Testing
 
@@ -165,18 +174,16 @@ Test coverage includes:
 
 ## 📦 Deployment
 
-### Vercel (Recommended)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/matrix-multiplication-calculator)
+### 🌐 Live Production Site
+The application is currently deployed on Vercel:
+**Production URL:** [https://matrix-multiplication-66055vpo4-bradley-beesons-projects.vercel.app](https://matrix-multiplication-66055vpo4-bradley-beesons-projects.vercel.app)
+
+### Vercel Deployment
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/bradleybeesonml/matrix-multiplication)
 
 1. Push your code to GitHub
 2. Connect your repository to Vercel
 3. Deploy with zero configuration
-
-### Netlify
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/matrix-multiplication-calculator)
-
-1. Build the project: `npm run build`
-2. Deploy the `dist` folder to Netlify
 
 ### Manual Deployment
 ```bash
@@ -194,9 +201,9 @@ npm run dev
 
 # Use your preferred screen recorder to capture:
 # 1. Loading a preset matrix
-# 2. Playing the animation
-# 3. Showing different step modes
-# 4. Demonstrating heatmap toggle
+# 2. Playing the animation with floating numbers
+# 3. Showing the running sum animation
+# 4. Demonstrating educational messages for incompatible dimensions
 ```
 
 ## 🤝 Contributing
@@ -229,10 +236,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/yourusername/matrix-multiplication-calculator/issues)
-- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/yourusername/matrix-multiplication-calculator/discussions)
-- 📧 **Email**: your.email@example.com
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/bradleybeesonml/matrix-multiplication/issues)
+- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/bradleybeesonml/matrix-multiplication/discussions)
+- 📧 **Email**: bradleybeesonml@gmail.com
 
 ---
 
-**Made with ❤️ for mathematics education**
+**Made with ❤️ for mathematics education by [Bradley Beeson](https://github.com/bradleybeesonml)**
