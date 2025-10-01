@@ -8,6 +8,7 @@ import { useMatrixStore } from '../store/matrixStore';
 import { useAnimator } from '../hooks/useAnimator';
 import { validateMultiplication } from '../utils/matrixOperations';
 import { FloatingNumber } from './FloatingNumber';
+import { Analytics } from '@vercel/analytics/react';
 
 const App: React.FC = () => {
   const {
@@ -52,6 +53,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Analytics />
       <FloatingNumber />
       {/* Header */}
       <header className="border-b bg-card">
